@@ -1,0 +1,103 @@
+body {
+    overflow: hidden;
+    background: white;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.l,.c,.r {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 32.5%;
+    height: 100%;
+    background-size: cover;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+}
+.l:hover,.c:hover,.r:hover {
+    -webkit-filter: grayscale(.0);
+            filter: grayscale(.0);
+}
+.l {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-image: url(../img/main/1.jpg);
+}
+.c {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url(../img/main/2.jpg);
+}
+.r {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-image: url(../img/main/3.jpg);
+}
+.info {
+    opacity: 0;
+    margin: 20%;
+    padding: 50px 0;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.49)), to(rgba(0, 0, 0, 0.49)));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.49) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.49) 100%);
+    border-radius: 8px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.l:hover .info,
+.c:hover .info,
+.r:hover .info {
+    opacity: 1;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        height: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .l,.c,.r {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 32.5%;
+        background-size: cover;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+        background-position: center;
+    }
+    .l {
+        background-position: top -120% left 0px;
+    }
+    .info {
+        margin: auto 20%;
+        padding: 25px 0;
+        opacity: 1;
+    }
+}
